@@ -1,11 +1,11 @@
 import React from "react";
 
-function OnlineMarketingExperience({ linkRef }) {
+function OnlineMarketingExperience({ linkRef, componentsColor }) {
   return (
     <div
       id="ONLINE"
       ref={linkRef}
-      className="bg-[#7071E8] h-screen grid place-items-center px-28"
+      className={`${componentsColor} transition-colors duration-500 ease-in-out h-screen grid place-items-center px-28`}
     >
       <div className="flex flex-col gap-1">
         <h1 className="font-bold text-base text-white">What is Lorem Ipsum?</h1>
