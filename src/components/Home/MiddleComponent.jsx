@@ -77,16 +77,16 @@ function MiddleComponent() {
   }, [links]);
 
   return (
-    <div className="sticky">
-      <div className="grid grid-cols-12">
-        <div className="col-span-6">
+    <div className="sticky ">
+      <div className="grid md:grid-cols-12 grid-cols-1 ">
+        <div className="md:col-span-6 md:block hidden">
           <LeftNavlinks
             links={links}
             activeLinkId={activeLinkId}
             setComponentsColor={setComponentsColor}
           />
         </div>
-        <div className="col-span-6">
+        <div className="md:col-span-6 ">
           <StrategyAndConsulting
             componentsColor={componentsColor}
             linkRef={strategyRef}

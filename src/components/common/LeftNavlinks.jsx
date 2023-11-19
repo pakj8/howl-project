@@ -29,13 +29,13 @@ function LeftNavlinks(props) {
 
   return (
     <div
-      className={` ${color} transition-colors duration-500 ease-in-out grid place-items-center h-screen sticky left-0 top-0 mt-20`}
+      className={` ${color} transition-colors duration-500 ease-in-out  grid place-items-center h-screen sticky left-0 top-0 mt-20`}
     >
       <div className="">
-        <ul className="list-none">
+        <ul className="list-none md:block hidden">
           {links.map(({ label, id, ref }) => {
             return (
-              <li key={id}>
+              <li key={id} className="md:rotate-0 -rotate-90">
                 <div
                   onClick={() =>
                     ref.current.scrollIntoView({ behavior: "smooth" })
@@ -44,7 +44,7 @@ function LeftNavlinks(props) {
                     id === activeLinkId
                       ? "transition-opacity duration-500 text-opacity-95 text-white"
                       : ""
-                  } text-4xl transition-opacity duration-500 text-opacity-30 text-white`}
+                  } md:text-4xl text-lg transition-opacity duration-500 text-opacity-30 text-white`}
                 >
                   {label}
                 </div>
@@ -52,6 +52,26 @@ function LeftNavlinks(props) {
             );
           })}
         </ul>
+        <div className="flex md:hidden flex-col gap-4">
+          {links.map(({ label, id, ref }) => {
+            return (
+              <div key={id} className="md:rotate-0 -rotate-90">
+                <div
+                  onClick={() =>
+                    ref.current.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className={`navItems${
+                    id === activeLinkId
+                      ? "transition-opacity duration-500 text-opacity-95 text-white"
+                      : ""
+                  } md:text-4xl truncate text-lg transition-opacity duration-500 text-opacity-30 text-white`}
+                >
+                  {label}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

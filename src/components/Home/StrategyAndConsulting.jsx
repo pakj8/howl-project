@@ -5,7 +5,7 @@ function StrategyAndConsulting({ linkRef, componentsColor }) {
     <div
       ref={linkRef}
       id="STRATEGY"
-      className={`${componentsColor} transition-colors duration-500 ease-in-out h-screen mt-20 grid place-items-center px-28`}
+      className={`${componentsColor} transition-colors duration-500 ease-in-out h-screen mt-20 grid place-items-center md:px-28`}
     >
       <div className="flex flex-col gap-1">
         <h1 className="font-bold text-base text-white">What is Lorem Ipsum?</h1>

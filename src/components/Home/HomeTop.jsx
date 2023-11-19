@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function HomeTop() {
   return (
     <div className="sub-container mt-36">
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
         <div className="flex flex-col gap-3">
           <motion.p
             initial={{ y: 200, opacity: 0 }}
@@ -23,7 +23,7 @@ function HomeTop() {
               initial={{ y: 200, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
-              className="text-8xl font-black  titleText text-white text0"
+              className="text-8xl font-black md:block hidden  titleText text-white text0"
             >
               Your
             </motion.h1>
@@ -31,7 +31,7 @@ function HomeTop() {
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.5 }}
-              className="text-8xl pl-10 font-black  titleText text-white text0"
+              className="text-8xl pl-10 font-black md:block hidden titleText text-white text0"
             >
               Growth
             </motion.h1>
@@ -39,7 +39,7 @@ function HomeTop() {
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 2 }}
-              className="text-8xl pl-20 font-black  titleText text-white text0"
+              className="text-8xl pl-20 font-black md:block hidden titleText text-white text0"
             >
               Partners
             </motion.h1>
@@ -49,7 +49,7 @@ function HomeTop() {
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-col items-center"
+          className="flex order-first md:order-last flex-col items-center"
         >
           <img src={Image1} alt="image1" className="w-full h-60 object-cover" />
           <img
