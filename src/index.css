@@ -11,7 +11,7 @@ body {
 
 @layer components {
   .main-container {
-    @apply container mx-auto md:px-20 lg:px-32 px-5;
+    @apply container mx-auto md:px-20 lg:px-32 px-5 mt-20;
   }
   .sub-container {
     @apply container mx-auto md:px-24 lg:px-72 px-5;
