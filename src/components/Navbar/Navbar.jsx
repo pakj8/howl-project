@@ -70,9 +70,6 @@ function Navbar() {
                     return (
                       <div
                         onClick={() => {
-                          document
-                            .getElementById(id)
-                            .scrollIntoView({ behavior: "smooth" });
                           setToggle(false);
                         }}
                         key={id}
