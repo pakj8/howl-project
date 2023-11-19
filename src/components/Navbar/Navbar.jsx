@@ -73,16 +73,13 @@ function Navbar() {
                           setToggle(false);
                         }}
                         key={id}
-                        className="md:rotate-0 -rotate-90 cursor-pointer"
                       >
-                        <div
-                          onClick={() =>
-                            ref.current.scrollIntoView({ behavior: "smooth" })
-                          }
+                        <a
+                          href={`#${id}`}
                           className={` md:text-2xl text-lg  text-black`}
                         >
                           {label}
-                        </div>
+                        </a>
                       </div>
                     );
                   })}
